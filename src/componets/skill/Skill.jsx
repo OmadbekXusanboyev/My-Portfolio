@@ -8,17 +8,17 @@ import SkillCard from "./SkillCard";
 function Skill() {
   const skillItem = [
     {
-      imgSrc: "./image/figma.svg",
+      imgSrc: "./figma.svg",
       label: "Figma",
       desc: "Design tool",
     },
     {
-      imgSrc: "./image/css3.svg",
+      imgSrc: "./css3.svg",
       label: "CSS",
       desc: "User Interface",
     },
     {
-     imgSrc: "./image/tailwindcss.svg",
+     imgSrc: "./tailwindcss.svg",
      label: "TailwindCSS",
      desc: "User Interface",
     },
@@ -28,12 +28,12 @@ function Skill() {
      desc: "User Interface",
    },
     {
-      imgSrc: "./image/javascript.svg",
+      imgSrc: "./javascript.svg",
       label: "JavaScript",
       desc: "Interaction",
     },
     {
-      imgSrc: "./image/react.svg",
+      imgSrc: "./react.svg",
       label: "React",
       desc: "Framework",
     },
