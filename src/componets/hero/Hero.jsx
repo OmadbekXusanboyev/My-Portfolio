@@ -52,7 +52,7 @@ function Hero() {
                     <img 
                     width={656}
                     height={800}
-                    src="/public/image/me-2.png" 
+                    src="./image/me-2.png" 
                     alt="" 
                     className="me-img w-full" />
                </figure>
