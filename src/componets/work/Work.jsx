@@ -8,7 +8,7 @@ import ProjectCard from "./ProjectCard";
 const Work = () => {
   const works = [
     {
-      imgSrc: "https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/2077db5c6db365fb1396c7626b90605b30ff6e92/51e6f606dc5ce170d52b8caa3509deac14859663",
+      imgSrc: "./project-1.png",
       title: "Marvel",
       tags: ["#Html", "#CSS", "#Javascript"],
       projectLink: "https://github.com/OmadbekXusanboyev/MARVEL",
