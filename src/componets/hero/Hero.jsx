@@ -48,7 +48,7 @@ function Hero() {
                </div>
           </div>
 
-          <div className="hidden lg:block">
+          <div className="">
                <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-sky-40/40 to-65% rounded-[40px] overflow-hidden">
                     <img 
                     width={656}
