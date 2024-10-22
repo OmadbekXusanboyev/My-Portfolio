@@ -34,28 +34,28 @@ const Review = () => {
       content:
         "Impressive work! Fast loading times, intuitive design, and flawless backend integration. Highly recommend.",
       name: "Ethan Caldwell",
-      imgSrc: "/public/people-1.jpg",
+      imgSrc: "./people-1.jpg",
       company: "NexaWave",
     },
     {
      content:
        "Impressive work! Fast loading times, intuitive design, and flawless backend integration. Highly recommend.",
      name: "Ethan Caldwell",
-     imgSrc: "/public/people-3.jpg",
+     imgSrc: "./people-3.jpg",
      company: "NexaWave",
    },
     {
       content:
         "Professional work! Delivered on time, with a polished design and smooth user experience. Top-notch developer.",
       name: "Ava Thompson",
-      imgSrc: "/public/people-4.jpg",
+      imgSrc: "./people-4.jpg",
       company: "TechMosaic",
     },
     {
       content:
         "Excellent project execution! High-quality code, responsive design, and exceptional problem-solving skills.",
       name: "Jonathan",
-      imgSrc: "/public/people-5.jpg",
+      imgSrc: "./people-5.jpg",
       company: "Skyline Digital",
     },
   ];

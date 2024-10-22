@@ -20,25 +20,25 @@ const Work = () => {
       projectLink: "https://github.com/OmadbekXusanboyev/PESTO-Restorant",
     },
     {
-      imgSrc: "/public/project-3.png",
+      imgSrc: "./project-3.png",
       title: "Jarvis voice assistant",
       tags: ["#Html", "#CSS", "#Javascript"],
       projectLink: "https://github.com/OmadbekXusanboyev/JARVIS-Voice-Assisent",
     },
     {
-      imgSrc: "/public/project-4.png",
+      imgSrc: "./project-4.png",
       title: "Music player",
       tags: ["#Html", "#CSS", "#Javascript"],
       projectLink: "https://github.com/OmadbekXusanboyev/Music-player",
     },
     {
-      imgSrc: "/public/macbook.png",
+      imgSrc: "./macbook.png",
       title: "Macbook & AirPods",
       tags: ["#React js"],
       projectLink: "https://github.com/OmadbekXusanboyev/MacBook-Airpods",
     },
     {
-      imgSrc: "/public/project-6.png",
+      imgSrc: "./project-6.png",
       title: "BuildCon",
       tags: ["#Html", "#CSS","#Bootstrap"],
       projectLink: "https://github.com/OmadbekXusanboyev/BuildCon",
@@ -49,7 +49,7 @@ const Work = () => {
     <div>
       <section id="work" className="section">
         <div className="container">
-          <h2 className="headlin-2 mb-8 reveal-up">My Portfolio hightlights</h2>
+          <h2 className="headline-2 mb-8 reveal-up">My Portfolio hightlights</h2>
 
           <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]">
             {works.map(
