@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
  * Primary Button
  */
 
-function ButtonPrimary({ href, target = "_self", label, icon, classes }) {
+function ButtonPrimary({ href, target = "_blank", label, icon, classes }) {
   if (href) {
     return (
       <a href={href} target={target} className={"btn btn-primary " + classes}>

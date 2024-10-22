@@ -36,6 +36,7 @@ function Hero() {
 
             <div className="flex items-center gap-3">
                <ButtonPrimary 
+               href="/public/My Resume.pdf"
                label="Download CV"
                icon="download" />
                
