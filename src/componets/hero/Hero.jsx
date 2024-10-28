@@ -24,8 +24,8 @@ function Hero() {
                 />
               </figure>
               <div className="flex items-center gap-1.5 text-zinc-500 text-sm tracking-wide">
-                <span className="relative w-2 h-2 rounded-full bg-emerald-400">
-                  <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
+                <span className="relative w-2 h-2 rounded-full bg-green-500">
+                  <span className="absolute inset-0 rounded-full bg-green-500 animate-ping"></span>
                 </span>
                 Available for work
               </div>
@@ -49,7 +49,7 @@ function Hero() {
           </div>
 
           <div className="">
-               <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-sky-40/40 to-65% rounded-[40px] overflow-hidden">
+               <figure className="w-full max-w-[483px] ml-auto bg-gradient-to-t from-orange-600 via-sky-20/40 to-65% rounded-[40px] overflow-hidden">
                     <img 
                     width={656}
                     height={800}

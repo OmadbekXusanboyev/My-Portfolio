@@ -12,7 +12,7 @@ import PropTypes from "prop-types";
 function ButtonPrimary({ href, target = "_blank", label, icon, classes }) {
   if (href) {
     return (
-      <a href={href} target={target} className={`btn btn-primary bg-orange-600 ${classes}`}>
+      <a href={href} target={target} className={`btn  bg-orange-600 ${classes}`}>
         {label}
 
         {icon ? (
@@ -24,7 +24,7 @@ function ButtonPrimary({ href, target = "_blank", label, icon, classes }) {
     );
   } else {
     return (
-      <button className={`btn btn-primary bg-orange-600 ${classes}`}>
+      <button className={`btn  bg-orange-600 ${classes}`}>
         {label}
 
         {icon ? (
