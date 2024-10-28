@@ -49,7 +49,7 @@ function Hero() {
           </div>
 
           <div className="">
-               <figure className="w-full max-w-[483px] ml-auto bg-gradient-to-t from-orange-600 via-sky-20/40 to-65% rounded-[40px] overflow-hidden">
+               <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-orange-600 via-sky-20/40 to-65% rounded-[40px] overflow-hidden">
                     <img 
                     width={656}
                     height={800}
