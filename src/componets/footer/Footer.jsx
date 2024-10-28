@@ -48,15 +48,19 @@ const Footer = () => {
     },
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div>
       <footer className="section">
         <div className="container">
-
           <div className="lg:grid lg:grid-cols-2">
-
             <div className="mb-10">
-              <h2 className="headline-1 mb-8 lg:max-w-[12ch] reveal-up">Let&apos;s work together today!</h2>
+              <h2 className="headline-1 mb-8 lg:max-w-[12ch] reveal-up">
+                Let&apos;s work together today!
+              </h2>
 
               <ButtonPrimary
                 href="mailto:xusanboyev03@inbox.ru"
@@ -67,59 +71,66 @@ const Footer = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-4 lg:pl-20">
-               <div>
-                    <p className="mb-2 reveal-up">Sitemap</p>
+              <div>
+                <p className="mb-2 reveal-up">Sitemap</p>
 
-                    <ul>
-                         {sitemap.map(({ label, href }, key) => (
-                              <li key={key}>
-                                   <a 
-                                   href={href}
+                <ul>
+                  {sitemap.map(({ label, href }, key) => (
+                    <li key={key}>
+                      <a
+                        href={href}
+                        className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up"
+                      >
+                        {label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-                                   className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up">
-                                        {label}
-                                   </a>
-                              </li>
-                         ))}
-                    </ul>
-               </div>
+              <div>
+                <p className="mb-2 reveal-up">Socials</p>
 
-               <div>
-                    <p className="mb-2 reveal-up">Socials</p>
-
-                    <ul>
-                         {socials.map(({ label, href }, key) => (
-                              <li key={key}>
-                                   <a 
-                                   href={href}
-                                   target="_blank"
-                                   className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up">
-                                        {label}
-                                   </a>
-                              </li>
-                         ))}
-                    </ul>
-               </div>
-
+                <ul>
+                  {socials.map(({ label, href }, key) => (
+                    <li key={key}>
+                      <a
+                        href={href}
+                        target="_blank"
+                        className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up"
+                      >
+                        {label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-
           </div>
 
           <div className="flex items-center justify-between gap-10 pt-10 mb-8">
-               <a 
-               href="/" 
-               className="reveal-up">
-                    <h1>
-                    <a href="/" className="logo text-2xl">Omad<span className="text-orange-600">Coder</span></a>
-               </h1>
-               </a>
+            <a href="/" className="reveal-up">
+              <h1>
+                <a href="/" className="logo text-2xl">
+                  Omad<span className="text-orange-600">Coder</span>
+                </a>
+              </h1>
+            </a>
 
-               <p className="text-sm text-zinc-400 select-none reveal-up">
-                    © 2024 Omad<span className="text-orange-600">Coder</span>. All rights reserved.
-               </p>
+            <p className="text-sm text-zinc-400 select-none reveal-up">
+              © 2024 Omad<span className="text-orange-600">Coder</span>. All
+              rights reserved.
+            </p>
           </div>
-
         </div>
+
+        <section className="section-top relative ">
+        <div className="top-btn absolute bottom-[130px] right-[70px] sm:right-[30px]" onClick={scrollToTop}>
+          <img className="w-[50px] :w-[30px] p-1 rounded-lg bg-[#302f30]" src="/public/Animation - top.gif" alt="Scroll to top" />
+        </div>
+      </section>
+
+
       </footer>
     </div>
   );

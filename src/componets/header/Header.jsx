@@ -8,7 +8,7 @@ import { useState } from "react"
 import Navbar from "../navbar/Navbar"
 
 function Header() {
-     const [navOpen, setNavOpen] = useState(true)
+     const [navOpen, setNavOpen] = useState(false)
   return (
     <div>
       <header className="fixed top-0 left-0 w-full h-20 flex items-center z-40 bg-gradient-to-b from-zinc-900 to-zinc-900/0">
@@ -28,7 +28,7 @@ function Header() {
                </div>
                <a 
                href="#contact" 
-               className="btn btn-secondary max-md:hidden md:justify-self-end">
+               className="btn btn-secondary max-md:hidden  md:justify-self-end">
                     Contact Me
                </a>
           </div>

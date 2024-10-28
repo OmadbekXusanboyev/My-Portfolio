@@ -5,7 +5,6 @@
 
 import PropTypes from "prop-types";
 
-
 /**
  * Primary Button
  */
@@ -13,7 +12,7 @@ import PropTypes from "prop-types";
 function ButtonPrimary({ href, target = "_blank", label, icon, classes }) {
   if (href) {
     return (
-      <a href={href} target={target} className={"btn btn-primary " + classes}>
+      <a href={href} target={target} className={`btn btn-primary bg-orange-600 ${classes}`}>
         {label}
 
         {icon ? (
@@ -25,7 +24,7 @@ function ButtonPrimary({ href, target = "_blank", label, icon, classes }) {
     );
   } else {
     return (
-      <button className={"btn btn-primary " + classes}>
+      <button className={`btn btn-primary bg-orange-600 ${classes}`}>
         {label}
 
         {icon ? (
@@ -51,39 +50,39 @@ ButtonPrimary.propTypes = {
  */
 
 function ButtonOutline({ href, target = "_self", label, icon, classes }) {
-     if (href) {
-       return (
-         <a href={href} target={target} className={"btn btn-outline " + classes}>
-           {label}
-   
-           {icon ? (
-             <span className="material-symbols-rounded" aria-hidden="true">
-               {icon}
-             </span>
-           ) : undefined}
-         </a>
-       );
-     } else {
-       return (
-         <button className={"btn btn-outline " + classes}>
-           {label}
-   
-           {icon ? (
-             <span className="material-symbols-rounded" aria-hidden="true">
-               {icon}
-             </span>
-           ) : undefined}
-         </button>
-       );
-     }
-   }
-   
-   ButtonOutline.propTypes = {
-     label: PropTypes.string.isRequired,
-     href: PropTypes.string,
-     target: PropTypes.string,
-     icon: PropTypes.string,
-     classes: PropTypes.string,
-   };
+  if (href) {
+    return (
+      <a href={href} target={target} className={`btn btn-outline ${classes}`}>
+        {label}
+
+        {icon ? (
+          <span className="material-symbols-rounded" aria-hidden="true">
+            {icon}
+          </span>
+        ) : undefined}
+      </a>
+    );
+  } else {
+    return (
+      <button className={`btn btn-outline ${classes}`}>
+        {label}
+
+        {icon ? (
+          <span className="material-symbols-rounded" aria-hidden="true">
+            {icon}
+          </span>
+        ) : undefined}
+      </button>
+    );
+  }
+}
+
+ButtonOutline.propTypes = {
+  label: PropTypes.string.isRequired,
+  href: PropTypes.string,
+  target: PropTypes.string,
+  icon: PropTypes.string,
+  classes: PropTypes.string,
+};
 
 export { ButtonPrimary, ButtonOutline };
