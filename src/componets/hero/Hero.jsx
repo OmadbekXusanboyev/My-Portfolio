@@ -16,6 +16,7 @@ function Hero() {
             <div className="flex items-center gap-3">
               <figure className="img-box w-9 h-9 rounded-lg">
                 <img
+                loading="lazy"
                   width={40}
                   height={40}
                   className="img-cover"
@@ -51,6 +52,7 @@ function Hero() {
           <div className="">
                <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-orange-600 via-sky-20/40 to-65% rounded-[40px] overflow-hidden">
                     <img 
+                    loading="lazy"
                     width={656}
                     height={800}
                     src="./image/me-2.png" 
