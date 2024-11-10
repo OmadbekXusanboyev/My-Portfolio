@@ -7,7 +7,7 @@ function About() {
   const aboutItems = [
     {
       label: "Project done",
-      number: 26,
+      number: 32,
     },
     {
       label: "Years of experiencs",
