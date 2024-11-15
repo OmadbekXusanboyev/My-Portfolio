@@ -31,40 +31,40 @@ const Review = () => {
 
   const reviews = [
     {
-      content: 'Exceptional web development! Delivered a seamless, responsive site with clean code and great UX.',
-      name: 'Sophia Ramirez',
-      imgSrc: './people-1.jpg',
-      company: 'PixelForge'
-    },
-    {
-      content: 'Impressive work! Fast loading times, intuitive design, and flawless backend integration. Highly recommend.',
-      name: 'Ethan Caldwell',
+      content: 'Great developer! Writes clean code, I give it 5 stars.',
+      name: 'Rahmatulloh A',
       imgSrc: './people-2.jpg',
-      company: 'NexaWave'
+      company: 'Marketolog'
+    },
+    {
+      content: 'Wu has a better experience than my most active reader.',
+      name: 'Abbosbek Q',
+      imgSrc: './people-1.jpg',
+      company: 'Frontend Developer'
     },
     {
       content: 'Impressive work! Fast loading times, intuitive design, and flawless backend integration. Highly recommend.',
-      name: 'Liam Bennett',
+      name: 'Ilhomjon I',
       imgSrc: './people-3.jpg',
-      company: 'CodeCraft'
+      company: 'Android Developer'
     },
     {
       content: 'Creative and skilled! Produced a modern, user-friendly site that exceeded expectations. Great communication.',
-      name: 'Noah Williams',
+      name: 'MuhammadAmin N',
       imgSrc: './people-4.jpg',
-      company: 'BrightWeb'
+      company: 'Managing Director'
     },
     {
-      content: 'Professional work! Delivered on time, with a polished design and smooth user experience. Top-notch developer.',
-      name: 'Ava Thompson',
+      content: 'Professional work! With a polished design and smooth user experience. Taught me a lot.',
+      name: 'Ziyovuddin T',
       imgSrc: './people-5.jpg',
-      company: 'TechMosaic'
+      company: 'Frontend Developer'
     },
     {
       content: 'Excellent project execution! High-quality code, responsive design, and exceptional problem-solving skills.',
-      name: 'Jonathan',
+      name: 'MuhammadAmin',
       imgSrc: './people-6.jpg',
-      company: 'Skyline Digital'
+      company: 'Frontend Developer'
     }
   ];
 

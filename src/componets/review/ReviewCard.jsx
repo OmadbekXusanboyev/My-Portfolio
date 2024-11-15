@@ -31,14 +31,14 @@ const ReviewCard = ({ content, name, imgSrc, company }) => {
 
         <p className="text-zinc-400 mb-8">{content}</p>
         <div className="flex items-center gap-2 mt-auto">
-          <figure className="img-box rounded-lg">
+          <figure className="img-box w-[44px] h-[44px] rounded-lg">
             <img
               src={imgSrc}
               alt={name}
               width={44}
               height={44}
               loading="lazy"
-              className="img-cover"
+              className="img-cover w-10"
             />
           </figure>
 
