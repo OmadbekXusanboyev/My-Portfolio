@@ -8,7 +8,7 @@ import ProjectCard from "./ProjectCard";
 const Work = () => {
   const works = [
     {
-      imgSrc: "./project-1.png",
+      imgSrc: "/public/image/project-1.png",
       title: "Marvel",
       tags: ["#Html", "#CSS", "#Javascript"],
       projectLink: "https://github.com/OmadbekXusanboyev/MARVEL",
@@ -20,25 +20,25 @@ const Work = () => {
       projectLink: "https://github.com/OmadbekXusanboyev/PESTO-Restorant",
     },
     {
-      imgSrc: "./project-3.png",
+      imgSrc: "/public/image/project-3.png",
       title: "Jarvis voice assistant",
       tags: ["#Html", "#CSS", "#Javascript"],
       projectLink: "https://github.com/OmadbekXusanboyev/JARVIS-Voice-Assisent",
     },
     {
-      imgSrc: "./project-4.png",
+      imgSrc: "/public/image/project-4.png",
       title: "Music player",
       tags: ["#Html", "#CSS", "#Javascript"],
       projectLink: "https://github.com/OmadbekXusanboyev/Music-player",
     },
     {
-      imgSrc: "./macbook.png",
+      imgSrc: "/public/image/macbook.png",
       title: "Macbook & AirPods",
       tags: ["#React js"],
       projectLink: "https://github.com/OmadbekXusanboyev/MacBook-Airpods",
     },
     {
-      imgSrc: "./project-6.png",
+      imgSrc: "/public/image/project-6.png",
       title: "BuildCon",
       tags: ["#Html", "#CSS","#Bootstrap"],
       projectLink: "https://github.com/OmadbekXusanboyev/BuildCon",
