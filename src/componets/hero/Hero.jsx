@@ -20,7 +20,7 @@ function Hero() {
                   width={40}
                   height={40}
                   className="img-cover"
-                  src="./public/image/sity-mall.jpg"
+                  src="./image/sity-mall.jpg"
                   alt="portrait"
                 />
               </figure>
