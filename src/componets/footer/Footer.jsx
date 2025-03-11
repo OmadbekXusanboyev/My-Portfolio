@@ -63,7 +63,7 @@ const Footer = () => {
               </h2>
 
               <ButtonPrimary
-                href="mailto:xusanboyev03@inbox.ru"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=xusanboyev03@inbox.ru"
                 label="Get in touch"
                 icon="chevron_right"
                 classes="reveal-up"
