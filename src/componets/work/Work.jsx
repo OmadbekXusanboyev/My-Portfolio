@@ -8,7 +8,7 @@ import ProjectCard from "./ProjectCard";
 const Work = () => {
   const works = [
     {
-      imgSrc: "/public/image/project-1.png",
+      imgSrc: "./image/project-1.png",
       title: "Marvel",
       tags: ["#Html", "#CSS", "#Javascript"],
       gitLink: "https://github.com/OmadbekXusanboyev/MARVEL",
@@ -22,28 +22,28 @@ const Work = () => {
       projectLink: "https://pesto-restorant.netlify.app/",
     },
     {
-      imgSrc: "/public/image/project-3.png",
+      imgSrc: "./image/project-3.png",
       title: "Jarvis voice assistant",
       tags: ["#Html", "#CSS", "#Javascript"],
       gitLink: "https://github.com/OmadbekXusanboyev/JARVIS-Voice-Assisent",
       projectLink: "https://jarvis-voice-assisent.netlify.app/",
     },
     {
-      imgSrc: "/public/image/project-4.png",
+      imgSrc: "./image/project-4.png",
       title: "Music player",
       tags: ["#Html", "#CSS", "#Javascript"],
       gitLink: "https://github.com/OmadbekXusanboyev/Music-player",
       projectLink: "https://music-player-07.netlify.app/",
     },
     {
-      imgSrc: "/public/image/macbook.png",
+      imgSrc: "./image/macbook.png",
       title: "Macbook & AirPods",
       tags: ["#React js"],
       gitLink: "https://github.com/OmadbekXusanboyev/MacBook-Airpods",
       projectLink: "https://macbook-airpods.netlify.app/",
     },
     {
-      imgSrc: "/public/image/project-6.png",
+      imgSrc: "./image/project-6.png",
       title: "BuildCon",
       tags: ["#Html", "#CSS","#Bootstrap"],
       gitLink: "https://github.com/OmadbekXusanboyev/BuildCon",
