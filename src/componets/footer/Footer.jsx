@@ -126,7 +126,7 @@ const Footer = () => {
 
         <section className="section-top relative ">
         <div className="top-btn absolute bottom-[130px] right-[30px] sm:right-[30px] cursor-pointer" onClick={scrollToTop}>
-          <img className="w-[50px] :w-[30px] p-1 rounded-lg bg-[#302f30]" src="./public/image/Animation - top.gif" alt="Scroll to top" />
+          <img className="w-[50px] :w-[30px] p-1 rounded-lg bg-[#302f30]" src="./image/Animation - top.gif" alt="Scroll to top" />
         </div>
       </section>
 
