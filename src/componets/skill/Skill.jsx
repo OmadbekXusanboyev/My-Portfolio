@@ -13,7 +13,7 @@ function Skill() {
       desc: "User Interface",
     },
     {
-      imgSrc: "https://w7.pngwing.com/pngs/393/49/png-transparent-css-logo-thumbnail.png",
+      imgSrc: "/public/image/css3.svg",
       label: "CSS",
       desc: "User Interface",
     },
