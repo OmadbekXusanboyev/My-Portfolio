@@ -13,12 +13,12 @@ function Skill() {
       desc: "User Interface",
     },
     {
-      imgSrc: "/public/image/css3.svg",
+      imgSrc: "./image/css3.svg",
       label: "CSS",
       desc: "User Interface",
     },
     {
-     imgSrc: "/public/image/tailwindcss.svg",
+     imgSrc: "./image/tailwindcss.svg",
      label: "TailwindCSS",
      desc: "User Interface",
     },
@@ -28,12 +28,12 @@ function Skill() {
      desc: "User Interface",
    },
     {
-      imgSrc: "/public/image/javascript.svg",
+      imgSrc: "./image/javascript.svg",
       label: "JavaScript",
       desc: "Interaction",
     },
     {
-      imgSrc: "/public/image/react.svg",
+      imgSrc: "./image/react.svg",
       label: "React",
       desc: "Framework",
     },
