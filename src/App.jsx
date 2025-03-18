@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
 import { ReactLenis } from "lenis/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { useState, useEffect } from "react";
 
 import About from "./componets/about/About";
 import Contact from "./componets/contact/Contact";
@@ -13,7 +13,7 @@ import Review from "./componets/review/Review";
 import Skill from "./componets/skill/Skill";
 import Work from "./componets/work/Work";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -21,12 +21,13 @@ function App() {
   const [audioPlayed, setAudioPlayed] = useState(false);
 
   useEffect(() => {
+    document.body.style.overflow = "hidden";
+
     const handleClick = () => {
       if (!audioPlayed) {
-        const audio = new Audio("./image/audio2.mp3");
+        const audio = new Audio("/image/audio2.mp3");
         audio.play().catch((err) => console.log("Audio playback blocked:", err));
         setAudioPlayed(true);
-        document.removeEventListener("click", handleClick);
       }
     };
 
@@ -34,11 +35,33 @@ function App() {
 
     const timer = setTimeout(() => {
       setFadeOut(true);
-      setTimeout(() => setLoading(false), 500);
+      setTimeout(() => {
+        setLoading(false);
+        document.body.style.overflow = "auto";
+
+        // 🔄 Lenis va GSAP uchun fix
+        window.scrollTo(0, 0);
+        ScrollTrigger.refresh();
+        window.dispatchEvent(new Event("resize")); // Lenisni yangilash uchun
+
+      }, 800);
     }, 5000);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener("click", handleClick);
+    };
   }, [audioPlayed]);
+
+  // 🔄 Review sektsiyasini qayta yuklash
+  useEffect(() => {
+    if (!loading) {
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+        window.dispatchEvent(new Event("resize"));
+      }, 800);
+    }
+  }, [loading]);
 
   useGSAP(() => {
     const elements = gsap.utils.toArray(".reveal-up");
@@ -63,10 +86,12 @@ function App() {
     <ReactLenis root>
       {loading && (
         <div
-          className={`fixed inset-0 flex items-center justify-center bg-black transition-opacity duration-500 ${fadeOut ? "opacity-0" : "opacity-100"
-            }`}
+          className={`fixed inset-0 flex items-center justify-center bg-black transition-opacity duration-500 ${
+            fadeOut ? "opacity-0" : "opacity-100"
+          }`}
         >
-          <img src="./image/welcome.gif" alt="Welcome to my Portfolio" className="w-[600px] h-auto" />
+          <img src="/image/welcome.gif" alt="Loading..." className="w-400 h-auto" />
+          <p className="absolute bottom-10 text-white text-sm">Ekranga bosib ovozni yoqing</p>
         </div>
       )}
 
@@ -77,7 +102,7 @@ function App() {
           <About />
           <Skill />
           <Work />
-          <Review />
+          <Review /> {/* 🟢 Review ishlashi uchun refresh qo‘shildi */}
           <Contact />
         </main>
         <Footer />
