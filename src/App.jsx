@@ -1,95 +1,87 @@
-import { useState, useEffect } from 'react';
-import { ReactLenis } from 'lenis/react';
+import { useState, useEffect } from "react";
+import { ReactLenis } from "lenis/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from '@gsap/react';
+import { useGSAP } from "@gsap/react";
+
+import About from "./componets/about/About";
+import Contact from "./componets/contact/Contact";
+import Footer from "./componets/footer/Footer";
+import Header from "./componets/header/Header";
+import Hero from "./componets/hero/Hero";
+import Review from "./componets/review/Review";
+import Skill from "./componets/skill/Skill";
+import Work from "./componets/work/Work";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-import About from './componets/about/About';
-import Contact from './componets/contact/Contact';
-import Footer from './componets/footer/Footer';
-import Header from './componets/header/Header';
-import Hero from './componets/hero/Hero';
-import Review from './componets/review/Review';
-import Skill from './componets/skill/Skill';
-import Work from './componets/work/Work';
-import welcomeGif from '/public/image/welcome.gif';
-
 function App() {
   const [loading, setLoading] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
   const [audioPlayed, setAudioPlayed] = useState(false);
 
   useEffect(() => {
-    const audio = new Audio('/public/image/audio2.mp3');
-
-    const playAudio = () => {
+    const handleClick = () => {
       if (!audioPlayed) {
-        audio.play().then(() => {
-          setAudioPlayed(true);
-        }).catch(error => console.log("Audio play error:", error));
+        const audio = new Audio("./image/audio2.mp3");
+        audio.play().catch((err) => console.log("Audio playback blocked:", err));
+        setAudioPlayed(true);
+        document.removeEventListener("click", handleClick);
       }
     };
 
-    window.addEventListener('mousemove', playAudio, { once: true });
-    window.addEventListener('scroll', playAudio, { once: true });
-    window.addEventListener('click', playAudio, { once: true });
+    document.addEventListener("click", handleClick, { once: true });
 
-    const timer = setTimeout(() => setLoading(false), 6000);
+    const timer = setTimeout(() => {
+      setFadeOut(true);
+      setTimeout(() => setLoading(false), 500);
+    }, 5000);
 
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('mousemove', playAudio);
-      window.removeEventListener('scroll', playAudio);
-      window.removeEventListener('click', playAudio);
-    };
+    return () => clearTimeout(timer);
   }, [audioPlayed]);
 
   useGSAP(() => {
     const elements = gsap.utils.toArray(".reveal-up");
+
     elements.forEach((element) => {
       gsap.to(element, {
         scrollTrigger: {
           trigger: element,
           start: "-200 bottom",
-          end: 'bottom 80%',
+          end: "bottom 80%",
           scrub: true,
         },
         y: 0,
         opacity: 1,
         duration: 1,
-        ease: 'power2.out'
+        ease: "power2.out",
       });
     });
   });
 
-  if (loading) {
-    return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh',
-        backgroundColor: '#000',
-        flexDirection: 'column'
-      }}>
-        <img src={welcomeGif} alt="Welcome" style={{ width: '500px' }} />
-      </div>
-    );
-  }
-
   return (
     <ReactLenis root>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Skill />
-        <Work />
-        <Review />
-        <Contact />
-      </main>
-      <Footer />
+      {loading && (
+        <div
+          className={`fixed inset-0 flex items-center justify-center bg-black transition-opacity duration-500 ${fadeOut ? "opacity-0" : "opacity-100"
+            }`}
+        >
+          <img src="./image/welcome.gif" alt="Welcome to my Portfolio" className="w-[600px] h-auto" />
+        </div>
+      )}
+
+      <div className={loading ? "hidden" : "block"}>
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <Skill />
+          <Work />
+          <Review />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </ReactLenis>
   );
 }
